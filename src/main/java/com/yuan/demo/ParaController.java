@@ -29,8 +29,15 @@ public class ParaController {
     public String required(@RequestParam(required = false,defaultValue = "0") Integer num){
         return "para from path: "+ num;
     }
+    //多数据传入 转换为 TestJavaBeanParam实体类
     @PostMapping("/testJavaBeen")
     public TestJavaBeanParam testJavaBean(TestJavaBeanParam testJavaBeanParam){
+        testJavaBeanParam.setStrTemp("OK");
+        return testJavaBeanParam;
+    }
+    //json格式传入
+    @PostMapping("/testJson")
+    public TestJavaBeanParam testJson(@RequestBody TestJavaBeanParam testJavaBeanParam){
         testJavaBeanParam.setStrTemp("OK");
         return testJavaBeanParam;
     }

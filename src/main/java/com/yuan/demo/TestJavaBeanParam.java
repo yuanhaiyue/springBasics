@@ -13,5 +13,6 @@ public class TestJavaBeanParam {
     private String address;
     private Date birthday;
 
+    private TestJavaBeanParamTwo testJavaBeanParamTwo;
     private String strTemp;
 }
