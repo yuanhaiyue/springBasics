@@ -14,9 +14,8 @@ public class StudentController {
     StudentService studentService;
 
     @GetMapping("/student")
-    public String student(@RequestParam Integer num){
-       Student student= studentService.findStudent(num);
-       return student.toString();
+    public Student student(@RequestParam Integer num){
+        return studentService.findStudent(num);
     }
 
 }
