@@ -29,7 +29,11 @@ public class ParaController {
     public String required(@RequestParam(required = false,defaultValue = "0") Integer num){
         return "para from path: "+ num;
     }
-
+    @PostMapping("/testJavaBeen")
+    public TestJavaBeanParam testJavaBean(TestJavaBeanParam testJavaBeanParam){
+        testJavaBeanParam.setStrTemp("OK");
+        return testJavaBeanParam;
+    }
 
 
 }

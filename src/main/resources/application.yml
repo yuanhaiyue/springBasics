@@ -25,6 +25,9 @@ spring:
 
 
         enable_lazy_load_no_trans: true
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd
 
 
 server:
