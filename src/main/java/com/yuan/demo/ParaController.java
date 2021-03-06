@@ -41,6 +41,9 @@ public class ParaController {
         testJavaBeanParam.setStrTemp("OK");
         return testJavaBeanParam;
     }
-
+    @PostMapping("/testPost")
+    public Integer testPost(Integer a,Integer b){
+        return a+b;
+    }
 
 }

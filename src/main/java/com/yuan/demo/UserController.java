@@ -11,4 +11,14 @@ public class UserController {
     public User testValiDated(@Validated User user){
         return user;
     }
+
+    @PostMapping("/testValidated-add")
+    public User testValidated_add(@Validated({Add.class}) User user){
+        return user;
+    }
+    @PostMapping("/testValidated-update")
+    public User testValidated_update(@Validated({Update.class}) User user){
+        return user;
+    }
+
 }
